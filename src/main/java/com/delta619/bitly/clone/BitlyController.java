@@ -1,13 +1,20 @@
 package com.delta619.bitly.clone;
 
+
+import org.springframework.graphql.data.method.annotation.Argument;
+import org.springframework.graphql.data.method.annotation.QueryMapping;
+import org.springframework.graphql.data.method.annotation.SchemaMapping;
+
+
+
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class BitlyController {
 
-    @GetMapping("/")
+    @GetMapping("/hi")
     public String hello(){
         return "hello World";
     }
@@ -21,9 +28,15 @@ public class BitlyController {
 
     @GetMapping("/shorten/{full_url}")
     public String shortenUrl(@PathVariable String full_url){
-        BitlyURL bitly_obj = new BitlyURL(full_url);
-        String short_url = bitly_obj.getShort_url();
-        return "https://bitly.com/"+short_url;
+        return "123";
     }
+
+//    @GetMapping("/test")
+//    @QueryMapping
+//    public BitlyURL bookById(@Argument String id) {
+//
+//    }
+
+
 
 }

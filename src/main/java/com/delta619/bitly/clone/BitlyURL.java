@@ -1,11 +1,13 @@
 package com.delta619.bitly.clone;
 import java.util.Random;
 
+
+
 public class BitlyURL {
     private String short_url;
-//    private String id;
+    private String id;
     private String full_url;
-//    private String user_id;
+    private String user_id;
 
     public BitlyURL(){
 
@@ -25,6 +27,7 @@ public class BitlyURL {
             }
             this.short_url = sb.toString();
     }
+
 
 
     public String getShort_url() {
