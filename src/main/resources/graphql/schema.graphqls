@@ -1,20 +1,9 @@
-type Query {
-   findAllbitlurl : [BitlyURL]
+type BitlyURL {
+    id: ID!
+    shortURL: String
+    longURL: String
 }
 
-type BitlyURL{
-    id: String
-    short_url: String
-    full_url: String
-    user_id: String
-}
-
-type User{
-    id: String
-    is_premium: Boolean!
-    urls: [BitlyURL]
-}
-
-type Mutation {
-    createBitlyURL(id: String, short_url: String,full_url: String, user_id:String ): BitlyURL!
+type Query{
+    findAll: [BitlyURL]!
 }
